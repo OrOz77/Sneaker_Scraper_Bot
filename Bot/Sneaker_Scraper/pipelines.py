@@ -5,7 +5,7 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import pymongo
-from Nike.MongoDB.config import MONGODB_URI, MONGODB_DB
+from Sneaker_Scraper.MongoDB.config import MONGODB_URI, MONGODB_DB
 
 
 class NikePipeline(object):
@@ -15,7 +15,7 @@ class NikePipeline(object):
 #Pipeline for storing to MongoDB
 class MongoPipeline(object):
 
-    collection_name = 'Nike.com Shoes'
+    collection_name = 'Sneakers'
 
     def __init__(self, mongo_uri, mongo_db):
         self.mongo_uri = mongo_uri
