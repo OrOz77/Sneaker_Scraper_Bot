@@ -1,2 +1,2 @@
 # Sneaker_Scraper_Bot
-Scraper for popular sneakers
+A scraper for popular sneakers built with Scrapy
