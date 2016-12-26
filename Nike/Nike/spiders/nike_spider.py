@@ -4,7 +4,7 @@ import re
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 from scrapy.selector import Selector
-from sneaker_scraper_test.items import ShoeItem
+from Nike.items import ShoeItem
 
 
 class NikeSpider(CrawlSpider):
