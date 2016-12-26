@@ -8,7 +8,22 @@
 import scrapy
 
 
-class NikeItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class ShoeItem(scrapy.Item):
+    # shoe is defined by:
+    #   brand
+    #   model name
+    #   model number
+    #   colorway
+    #   price
+    #   sizes available
+    #   website source
+
+    _id = scrapy.Field()        #necessary for db storage
+    brand = scrapy.Field()
+    modelName = scrapy.Field()
+    modelNumber = scrapy.Field()
+    colorway = scrapy.Field()
+    price = scrapy.Field()
+    sizes = scrapy.Field()
+    urlSource = scrapy.Field()
+    url = scrapy.Field()
