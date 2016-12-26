@@ -10,6 +10,7 @@ from Sneaker_Scraper.items import ShoeItem
 class NikeSpider(CrawlSpider):
     name = 'Nike'
     allowed_domains = ['nike.com']
+    rotate_user_agent = True
     start_urls = [                                                                                                          #add any desired shoe URL from Nike.com to scrape new data
         'http://store.nike.com/us/en_us/pd/flyknit-racer-unisex-running-shoe/pid-10064409/pgid-11809455',                   #Unisex Flyknit Racers
         'http://store.nike.com/us/en_us/pd/air-zoom-structure-20-shield-mens-running-shoe/pid-11239090/pgid-11462468',      #Men's Air Zoom Structure
