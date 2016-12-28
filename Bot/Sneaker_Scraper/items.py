@@ -27,3 +27,4 @@ class ShoeItem(scrapy.Item):
     sizes = scrapy.Field()
     urlSource = scrapy.Field()
     url = scrapy.Field()
+    imageUrl = scrapy.Field()
