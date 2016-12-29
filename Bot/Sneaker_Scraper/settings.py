@@ -52,32 +52,32 @@ DOWNLOAD_DELAY = 3
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = {
-        'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware' : None,        #disable default user agent
+#DOWNLOADER_MIDDLEWARES = {
+#        'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware' : None,        #disable default user agent
     #    'scrapy.downloadermiddlewares.retry.RetryMiddleware': 90,                  #PROXY: times to retry
     #    'scrapy_proxies.RandomProxy': 100,                                         #PROXY
     #    'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,         #PROXY
     #    'Sneaker_Scraper.protect.rotate_useragent.RotateUserAgentMiddleware' :400  #CUSTOM USER AGENT SWITCHER (DOESN'T WORK?)
-         'scrapy_fake_useragent.middleware.RandomUserAgentMiddleware': 400,         #PIP PACKAGE 'scrapy-fake-useragent' (WORKS)
-    }
+#         'scrapy_fake_useragent.middleware.RandomUserAgentMiddleware': 400,         #PIP PACKAGE 'scrapy-fake-useragent' (WORKS)
+#    }
 
 # Retry many times since proxies often fail
-RETRY_TIMES = 10
+#RETRY_TIMES = 10
 # Retry on most error codes since proxies fail for different reasons
-RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
+#RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
 
 # Proxy list containing entries like
 # http://host1:port
 # http://username:password@host2:port
 # http://host3:port
 # ...
-#PROXY_LIST = full/path/to/list.txt 
+#PROXY_LIST = full/path/to/list.txt
 
 # Proxy mode
 # 0 = Every requests have different proxy
 # 1 = Take only one proxy from the list and assign it to every requests
 # 2 = Put a custom proxy to use in the settings
-PROXY_MODE = 0
+#PROXY_MODE = 0
 
 # If proxy mode is 2 uncomment this sentence :
 #CUSTOM_PROXY = "http://host1:port"
