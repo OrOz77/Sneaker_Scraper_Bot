@@ -15,8 +15,6 @@ class NikePipeline(object):
 #Pipeline for storing to MongoDB
 class MongoPipeline(object):
 
-    collection_name = 'Sneakers'
-
     def __init__(self, mongo_uri, mongo_db):
         self.mongo_uri = mongo_uri
         self.mongo_db = mongo_db
@@ -36,5 +34,5 @@ class MongoPipeline(object):
         self.client.close()
 
     def process_item(self, item, spider):
-        self.db[self.collection_name].insert(dict(item)) #store item to collection
+        self.db[item['urlSource']].insert(dict(item)) #store item to collection by source
         return item
